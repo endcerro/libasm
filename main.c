@@ -1,7 +1,10 @@
-extern int strlen(char *c);
+extern int ft_strlen(char *c);
+
 int main()
 {
-	int len = strlen("hello");
+	int len;
+	char *test = "Hello world";
+	len = ft_strlen(test);
 	printf("len = %d\n",len );
 	return 0;
 }
