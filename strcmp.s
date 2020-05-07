@@ -38,10 +38,19 @@ null_p:
 	jmp	lower
 
 greater :
-	mov rax, 1
+	sub al, ah
+	and ax, 0ffh	
 	ret
 lower:
-	mov rax, -1
+	sub al, ah
+	mov bl, al
+	;mov ah, 255
+	;mov rax, -1
+	;and rax, 0ffh 
+	mov rax, 0xffffffff
+	;xor rax, rax
+	;xor rax, rax
+	mov al, bl	
 	ret
 equal:
 	mov rax, 0

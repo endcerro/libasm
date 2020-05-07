@@ -10,7 +10,7 @@ int main()
 	printf("len = %d\n",len );
 	
 	char *test1 = "test";
-	char *test2 = "test";
+	char *test2 = "testa";
 
 	
 	printf("cmp %d\n", ft_strcmp(test1, test2));
