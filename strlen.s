@@ -1,10 +1,13 @@
 section .text
   global  ft_strlen
-; delete RAX
+
+;RDI is the param
 
 ft_strlen:
-      xor   rax, rax            ; set return regis to 0
-      jmp   compare             ; goto compare
+ 	xor   rax, rax            ; iterator/return to 0
+      	cmp   rdi, 0
+	je    done
+	jmp   compare             ; goto compare
 increment:
       inc   rax                 ; i++
 compare:
