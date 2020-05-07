@@ -9,12 +9,10 @@ int main()
 	len = ft_strlen("hello");
 	printf("len = %d\n",len );
 	
-	char *test1 = "test";
-	char *test2 = "testa";
 
 	
-	printf("cmp %d\n", ft_strcmp(test1, test2));
-	printf("cmp %d", strcmp(test1, test2));
+	printf("cmp %d\n", ft_strcmp("Testa", "Test"));
+	printf("cmp %d\n", strcmp("Testa", "Test"));
 	
 	
 	return 0;

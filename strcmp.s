@@ -33,25 +33,20 @@ compare:
 
 null_p:
 	cmp 	rsi, rdi		;Comparing two params
-	jz	equal
-	jg 	greater
-	jmp	lower
+	jz	equal			;If equal
+	jg 	greater			;If greater
+	jmp	lower			;If lower
 
 greater :
-	sub al, ah
-	and ax, 0ffh	
-	ret
+	sub al, ah			;Substract
+	mov ah, 0			;Clear 	
+	ret				;Return
 lower:
-	sub al, ah
-	mov bl, al
-	;mov ah, 255
-	;mov rax, -1
-	;and rax, 0ffh 
-	mov rax, 0xffffffff
-	;xor rax, rax
-	;xor rax, rax
-	mov al, bl	
-	ret
+	sub al, ah			;Substract
+	mov bl, al			;Copy into temp
+	mov rax, 0xffffffff		;Set to -1
+	mov al, bl			;Copy temp into lower register
+	ret				;Return
 equal:
-	mov rax, 0
-	ret
+	mov rax, 0			;Set to 0
+	ret				;Return
