@@ -39,14 +39,16 @@ null_p:
 
 greater :
 	sub al, ah			;Substract
-	mov ah, 0			;Clear 	
+	mov ah, 0			;Clear 
+	;mov rax, 1	
 	ret				;Return
 lower:
 	sub al, ah			;Substract
 	mov bl, al			;Copy into temp
 	mov rax, 0xffffffff		;Set to -1
-	mov al, bl			;Copy temp into lower register
+	mov al, bl
+	;mov rax, -1			;Copy temp into lower register
 	ret				;Return
 equal:
-	mov rax, 0			;Set to 0
+	mov rax, 0			;Set to 0	
 	ret				;Return
