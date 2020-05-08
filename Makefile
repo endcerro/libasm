@@ -12,7 +12,7 @@ OBJS = ${SRCS:.s=.o}
 .s.o:
 	nasm -f elf64 $^
 
-$(NAME) : ${OBJS}
+$(NAME) : ${OBJS} 
 	ar rcs $(NAME) $(OBJS)
 	gcc main.c $(NAME)
 
