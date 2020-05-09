@@ -18,7 +18,7 @@ ft_read:
     xor	ecx, ecx				;Char *slot reset
     mov ecx, esi				;Copying into param slot
 
-print :
+read :
 	mov     eax,3           ;system call number (sys_write)
     int     0x80            ;call kernel
 	cmp 	rax, 0			;Check if write return is neg (error)
