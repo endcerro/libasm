@@ -1,6 +1,8 @@
 #include "libasm.h"
 //#include <stdio.h>
 //#include <unistd.h>
+#include <errno.h>
+
 #include <string.h>
 #include <fcntl.h>
 #include <stdio.h>
@@ -20,8 +22,17 @@ int main()
 	//printf("cmp %d\n", strcmp("Testa", "Test\n"));
 	//printf("cmp %d\n", ft_strcmp("Testa", "Test\n"));
 	int out;
-	out = ft_write(1,"#c#s#p#x#X#e#f#g",16);
-	printf("\n%d\n",out );
+// 	out = ft_write(1, "Lorem ipsum dolor sit amet, consectetur adipiscingelit. Sed in malesuada purus. Etiam a scelerisque massa. Ut non euismod elit. Aliquambibendum dolor mi, id fringilla tellus pulvinar eu. Fusce vel fermentum sem. Crasvolutpat, eros eget rhoncus rhoncus, diam augue egestas dolor, vitae rutrum nisifelis sed purus. Mauris magna ex, mollis non suscipit eu, lacinia ac turpis. Phasellusac tortor et lectus fermentum lobortis eu at mauris. Vestibulum sit amet posueretortor, sit amet consequat amet.", 494
+// );
+	out = ft_write(1,"Bonjour",5);
+	printf("\n%d %s\n",out,strerror(errno));
+	// printf("%s\n");
+	out = write(1,"Bonjour",5);
+	printf("\n%d %s\n",out,strerror(errno));
+	// out = ft_write(9809, "bonjour", 7);
+	// printf("\n%d\n",out );
+
+
 //	char *mal = strdup("TOCPY             ");
 //	char *mal2 = strdup("BASE             ");
 //	printf("%d\n", ft_strcmp("11","1"));	
