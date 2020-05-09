@@ -26,16 +26,26 @@ int main()
 // );
 
 
-	char *str = NULL;
-	int len = 10;
-	int fd = 1;
+	// char *str = "haha";
+	// int len = 10;
+	// int fd = 1;
 
 
-	out = ft_write(fd,str,len);
-	printf("\n%d %s\n",out,strerror(errno));
-	out = write(fd,str,len);
-	printf("\n%d %s\n",out,strerror(errno));
+	// out = ft_write(fd,str,len);
+	// printf("\n%d %s\n",out,strerror(errno));
+	// out = write(fd,str,len);
+	// printf("\n%d %s\n",out,strerror(errno));
 
+
+	char *test = malloc(sizeof(char) * 100);
+
+	out = ft_read(1,test,5);
+	printf("\n%d : %s\n %s",out, test, strerror(errno));
+	free(test);
+
+
+	out = ft_read(1,test,5);
+	printf("\n%d : %s\n %s",out, test,strerror(errno));
 
 
 //	char *mal = strdup("TOCPY             ");
