@@ -24,13 +24,18 @@ int main()
 	int out;
 // 	out = ft_write(1, "Lorem ipsum dolor sit amet, consectetur adipiscingelit. Sed in malesuada purus. Etiam a scelerisque massa. Ut non euismod elit. Aliquambibendum dolor mi, id fringilla tellus pulvinar eu. Fusce vel fermentum sem. Crasvolutpat, eros eget rhoncus rhoncus, diam augue egestas dolor, vitae rutrum nisifelis sed purus. Mauris magna ex, mollis non suscipit eu, lacinia ac turpis. Phasellusac tortor et lectus fermentum lobortis eu at mauris. Vestibulum sit amet posueretortor, sit amet consequat amet.", 494
 // );
-	out = ft_write(1,"Bonjour",5);
+
+
+	char *str = NULL;
+	int len = 10;
+	int fd = 1;
+
+
+	out = ft_write(fd,str,len);
 	printf("\n%d %s\n",out,strerror(errno));
-	// printf("%s\n");
-	out = write(1,"Bonjour",5);
+	out = write(fd,str,len);
 	printf("\n%d %s\n",out,strerror(errno));
-	// out = ft_write(9809, "bonjour", 7);
-	// printf("\n%d\n",out );
+
 
 
 //	char *mal = strdup("TOCPY             ");
