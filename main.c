@@ -36,16 +36,32 @@ int main()
 	// out = write(fd,str,len);
 	// printf("\n%d %s\n",out,strerror(errno));
 
+	char *mall = strdup("Hello world         ");
+	char *mall2 = strdup("Goodbye world      ");
 
-	char *test = malloc(sizeof(char) * 100);
+	ft_strcpy(mall,mall2 );
 
-	out = ft_read(1,test,5);
-	printf("\n%d : %s\n %s",out, test, strerror(errno));
-	free(test);
+	printf("%s\n%s\n",mall, mall2 );
 
 
-	out = ft_read(1,test,5);
-	printf("\n%d : %s\n %s",out, test,strerror(errno));
+
+	char *str = ft_strdup("Hello frend");
+	// printf("%d\n",str );
+	// str[0]= 'a';
+	// str[1] = 'b';
+	// str[2] = 0;
+	// str[3] = 0;
+	printf("%s\n",str );
+	// free(str);
+	// char *test = malloc(sizeof(char) * 100);
+
+	// out = ft_read(1,test,5);
+	// printf("\n%d : %s\n %s",out, test, strerror(errno));
+	// free(test);
+
+
+	// out = ft_read(1,test,5);
+	// printf("\n%d : %s\n %s",out, test,strerror(errno));
 
 
 //	char *mal = strdup("TOCPY             ");
