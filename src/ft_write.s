@@ -23,7 +23,7 @@ print :
     int     0x80            ;call kernel
 	cmp 	rax, 0			;Check if write return is neg (error)
 	jl 		exit_error		
-	mov 	eax, r8d		;Return written char val
+	; mov 	eax, r8d		;Return written char val
 	ret
 
 exit_error:

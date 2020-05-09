@@ -1,6 +1,11 @@
 #ifndef LIBASM_H
 #define LIBASM_H
 #include <unistd.h>
+#include <errno.h>
+#include <string.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 size_t	ft_strlen(char *a);
 size_t	ft_write(int fd, char *str, int len);

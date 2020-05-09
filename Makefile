@@ -14,13 +14,17 @@ OBJS = ${SRCS:.s=.o}
 .s.o:
 	nasm -f elf64 $^
 
+test : $(NAME)
+	gcc -no-pie main.c $(NAME)
+
 $(NAME) : ${OBJS} 
 	ar rcs $(NAME) $(OBJS)
-	gcc main.c $(NAME)
-
+	
 clean :
-	rm $(NAME)
-	rm a.out
+	rm -rf $(NAME)
+	rm -rf a.out
 
 fclean : clean
-	rm $(OBJS)
+	rm -rf $(OBJS)
+
+re : fclean all

@@ -16,7 +16,7 @@ check_null:
 	jmp	copy
 copy :
 	inc 	rcx
-	mov	al, BYTE[rsi + rcx] 	;Copy in cache
+	mov		al, BYTE[rsi + rcx] 	;Copy in cache
 	mov 	BYTE[rdi + rcx], al 	;Copy from cache
 	jmp 	check_end	
 
