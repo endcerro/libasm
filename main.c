@@ -32,8 +32,8 @@ int main()
 	printf("Testing ft_strcmp :\n");
 	
 
-	str1 = strdup("Sample text");
-	str2 = strdup("Sample text2");
+	str1 = strdup("Sample text ");
+	str2 = strdup("Sample text");
 
 
 	printf("|%s| and |%s|\n",str1, str2);

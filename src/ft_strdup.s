@@ -14,9 +14,16 @@ ft_strdup:
 	xor rdi, rdi
 	mov rdi, rax	;Put len in arg1 slot
 	call malloc		;Malloc of the size, addr in rax
+	cmp rax, 0		;Check if malloc succes
+	jle	error
 	xor rdi, rdi	;reset just in case
 	xor rsi, rsi	;reset just in case
 	mov rdi, rax	;Allocated space in first slot adddr
 	mov rsi, r8		;Str to dup
 	call ft_strcpy	;Copy
 	ret 			;Done
+
+error:
+	xor rax, rax
+	mov rax, 0
+	ret
